@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Happy 8/3 💖</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI';
+background: linear-gradient(135deg,#ffb6d9,#ffcce6);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+}
+
+.book{
+width:360px;
+height:520px;
+position:relative;
+perspective:2000px;
+}
+
+.page{
+width:100%;
+height:100%;
+position:absolute;
+background:white;
+border-radius:15px;
+overflow:hidden;
+transform-origin:left;
+transition:transform 1.2s;
+box-shadow:0 15px 40px rgba(0,0,0,0.25);
+}
+
+.page img{
+width:100%;
+height:65%;
+object-fit:cover;
+}
+
+.text{
+padding:15px;
+text-align:center;
+line-height:1.5;
+}
+
+button{
+margin-top:10px;
+padding:10px 20px;
+border:none;
+background:#ff4da6;
+color:white;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+}
+
+.flipped{
+transform:rotateY(-180deg);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="book">
+
+<div class="page" id="p1">
+<img src="img1.jpg">
+<div class="text">
+<p>
+À nhon cục cưngg. Lại là anhh đây, thật ra a cũng không biết phải viết cái gì nữa,
+nhưng mà nay là ngày của em mà phải làm cái gì đó nó hoành tráng mà nó ấn tượng
+1 tí để em có thể nhớ tới anh quài quài.
+</p>
+
+<button onclick="nextPage(1)">Lật trang</button>
+</div>
+</div>
+
+
+<div class="page" id="p2">
+<img src="img2.jpg">
+<div class="text">
+<p>
+Ước gì ngày 8/3 này công chúa chấp nhận ở bên cạnh anh thêm 1 lần nữa ha,
+anh biết là có nhiều cái e cảm thấy không ổn và sợ khi quay lại bên anh.
+Nhưng mà a cũng muốn chấm dứt cái nỗi sợ đó cho em,
+ít ra a muốn a cố gắng để yêu em trọn vẹn thương em bền lâu hơn.
+Anh muốn chứng minh là a có thể làm được.
+</p>
+
+<button onclick="nextPage(2)">Lật trang</button>
+</div>
+</div>
+
+
+<div class="page" id="p3">
+<img src="img3.jpg">
+<div class="text">
+<p>
+Nhưng mà anh không thể nào lấy cớ là nhân ngày 8/3 để “dụ dỗ” e về bên anh được he he.
+Nên là, chúc Mtrannn ngày 8/3 thật dui dẻ nè,
+ngày càng xink gái, giữ gìn sức khoẻ,
+gáng kiếm được mục đích và dự định sắp tới cho bản thân
+(và hãy ở bên cạnh anh nhoé )
+</p>
+
+<h3>Luv vờ u ❤️</h3>
+
+</div>
+</div>
+
+</div>
+
+
+<audio autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+
+<script>
+
+function nextPage(page){
+document.getElementById("p"+page).classList.add("flipped");
+}
+
+</script>
+
+</body>
+</html>
